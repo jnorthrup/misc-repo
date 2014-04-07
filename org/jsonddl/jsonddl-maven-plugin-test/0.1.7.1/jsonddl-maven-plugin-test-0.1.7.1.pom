@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>parent</artifactId>
+    <groupId>org.jsonddl</groupId>
+    <version>0.1.7.1</version>
+  </parent>
+  <artifactId>jsonddl-maven-plugin-test</artifactId>
+  <packaging>jar</packaging>
+  <name>Smoke test for JsonDdl maven plugin</name>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.jsonddl</groupId>
+      <artifactId>jsonddl</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jsonddl</groupId>
+        <artifactId>jsonddl-maven-plugin</artifactId>
+        <version>${project.version}</version>
+        <executions>
+          <execution>
+            <id>industrial</id>
+            <configuration>
+              <!-- Use implicit package naming -->
+              <dialects>
+                <dialect>idiomatic</dialect>
+                <dialect>industrial</dialect>
+                <dialect>normalized</dialect>
+              </dialects>
+            </configuration>
+            <goals>
+              <goal>generate-sources</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>pojo</id>
+            <configuration>
+              <!-- Rename inferred schema package -->
+              <schemas>
+                <org.jsonddl.test.pojo>src/main/jsonddl/org.jsonddl.test.industrial.js</org.jsonddl.test.pojo>
+              </schemas>
+              <dialects>
+                <dialect>pojo</dialect>
+              </dialects>
+            </configuration>
+            <goals>
+              <goal>generate-sources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <configuration>
+            <skip>true</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>
