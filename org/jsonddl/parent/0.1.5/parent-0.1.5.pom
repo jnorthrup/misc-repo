@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.jsonddl</groupId>
+  <artifactId>parent</artifactId>
+  <version>0.1.5</version>
+  <packaging>pom</packaging>
+  <name>JsonDdl</name>
+  <description>JsonDdl allows JSON schemas to be specified in a JSON-like format and provides code-generation tools based thereon.</description>
+  <url>http://jsonddl.org</url>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+  <modules>
+    <module>generator</module>
+    <module>gwt-jso</module>
+    <module>industrial-test</module>
+    <module>jsonddl</module>
+    <module>plugin</module>
+    <module>plugin-test</module>
+    <module>processor</module>
+    <module>processor-test</module>
+  </modules>
+
+  <inceptionYear>2011</inceptionYear>
+  <developers>
+    <developer>
+      <name>Robert W. Vawter III</name>
+      <email>bob@vawter.org</email>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:git@github.com:bobvawter/JsonDdl.git</connection>
+    <url>git@github.com:bobvawter/JsonDdl.git</url>
+    <developerConnection>scm:git:git@github.com:bobvawter/JsonDdl.git</developerConnection>
+  </scm>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.10</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.easymock</groupId>
+      <artifactId>easymock</artifactId>
+      <version>3.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.3.2</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.2.1</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+          <tagNameFormat>jsonddl-@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
