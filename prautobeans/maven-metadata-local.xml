@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <plugins>
+    <plugin>
+      <name>prautobeans-maven-plugin</name>
+      <prefix>prautobeans</prefix>
+      <artifactId>prautobeans-maven-plugin</artifactId>
+    </plugin>
+  </plugins>
+</metadata>
