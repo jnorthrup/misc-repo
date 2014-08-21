@@ -3,9 +3,10 @@
   <groupId>bbcursive</groupId>
   <artifactId>bbcursive</artifactId>
   <versioning>
+    <release>0.1.0-anyNPO</release>
     <versions>
-      <version>1.0-SNAPSHOT</version>
+      <version>0.1.0-anyNPO</version>
     </versions>
-    <lastUpdated>20140810221915</lastUpdated>
+    <lastUpdated>20140821010818</lastUpdated>
   </versioning>
 </metadata>

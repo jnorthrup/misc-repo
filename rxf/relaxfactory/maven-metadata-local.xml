@@ -3,12 +3,13 @@
   <groupId>rxf</groupId>
   <artifactId>relaxfactory</artifactId>
   <versioning>
-    <release>0.9.9.2</release>
+    <release>0.9.9.3-ANYNPO</release>
     <versions>
       <version>0.9.9.0</version>
       <version>0.9.9.1</version>
       <version>0.9.9.2</version>
+      <version>0.9.9.3-ANYNPO</version>
     </versions>
-    <lastUpdated>20140810221917</lastUpdated>
+    <lastUpdated>20140821010828</lastUpdated>
   </versioning>
 </metadata>
