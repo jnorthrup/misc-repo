@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>org.apache.maven.plugin-tools</groupId>
-            <artifactId>maven-plugin-annotations</artifactId>
+            <artifactId>maven-plugin-annotations</artifactId>  <scope>provided</scope><!-- annotations are needed only to build the plugin -->
         </dependency>
         <dependency>
             <groupId>org.codehaus.plexus</groupId>
@@ -53,6 +53,7 @@
                 <configuration>
                     <goalPrefix>prautobeans</goalPrefix>
                     <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
+
                 </configuration>
                 <executions>
                     <execution>
@@ -60,13 +61,13 @@
                         <goals>
                             <goal>descriptor</goal>
                         </goals>
-                    </execution><!--
+                    </execution>
                     <execution>
                         <id>help-goal</id>
                         <goals>
                             <goal>helpmojo</goal>
                         </goals>
-                    </execution>-->
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
