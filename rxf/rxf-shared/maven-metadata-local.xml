@@ -3,13 +3,14 @@
   <groupId>rxf</groupId>
   <artifactId>rxf-shared</artifactId>
   <versioning>
-    <release>0.9.9.3-ANYNPO</release>
+    <release>0.9.9.3.1</release>
     <versions>
       <version>0.9.9.0</version>
       <version>0.9.9.1</version>
       <version>0.9.9.2</version>
       <version>0.9.9.3-ANYNPO</version>
+      <version>0.9.9.3.1</version>
     </versions>
-    <lastUpdated>20140821010828</lastUpdated>
+    <lastUpdated>20140822051356</lastUpdated>
   </versioning>
 </metadata>
