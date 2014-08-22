@@ -60,13 +60,13 @@
                         <goals>
                             <goal>descriptor</goal>
                         </goals>
-                    </execution>
+                    </execution><!--
                     <execution>
                         <id>help-goal</id>
                         <goals>
                             <goal>helpmojo</goal>
                         </goals>
-                    </execution>
+                    </execution>-->
                 </executions>
             </plugin>
         </plugins>
